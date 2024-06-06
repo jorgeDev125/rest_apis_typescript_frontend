@@ -33,11 +33,11 @@ export default function NewProduct() {
   return (
     <>
       <div className="flex justify-between">
-        <h2 className="text-4xl font-black text-slate-500">Registrar Producto</h2>
+        <h2 className="text-3xl font-black text-slate-500">Registrar Producto</h2>
         <Link
           to="/"
-          className="rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500"    
-        >Volver Productos</Link>
+          className="rounded-md bg-indigo-600 p-3 text-sm text-center font-bold text-white shadow-sm hover:bg-indigo-500"    
+        >Volver a Productos</Link>
       </div>
       {/* si hay algo en error se renderiza el componente de ErrorMessage y se la pasa el error como children */}
       {error && <ErrorMessage>{error}</ErrorMessage>}
