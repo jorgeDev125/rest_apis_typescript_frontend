@@ -87,8 +87,6 @@ export async function updateProduct ( data: ProductData, id: Product["id"]) {
         } else {
             throw new Error("Datos no Válidos")
         }
-        console.log(result)
-
     } catch (error) {
         console.log(error)
     }
