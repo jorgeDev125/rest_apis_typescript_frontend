@@ -24,27 +24,27 @@ export default function ProductDetails( {product} : ProductDetailsProps) {
   const isAvailable = product.availability
 
   return (
-    <tr className="border-b ">
-      <td className="p-3 text-lg text-gray-800">
+    <tr className=" grid grid-cols-3 sm:grid-cols-4 border-b text-sm sm:text-lg items-center">
+      <td className="p-3  text-gray-800 ">
         {product.name}
       </td>
-      <td className="p-3 text-lg text-gray-800 text-center">
+      <td className="p-3  text-gray-800 text-center">
         {formatCurrency(product.price)}
       </td>
-      <td className="p-3 text-lg text-gray-800 text-center">
+      <td className="p-3  text-gray-800 text-center">
         <fetcher.Form method="POST">
           <button
             type="submit"
             name="id" //el name y el value son el id y no la availability, ya que requiero el id para hacer el patch, no me interesa la availability
             value={product.id}
-            className={`${isAvailable ? "text-black" : "text-red-600"} rounded-lg p-2 text-xs uppercase font-bold w-full border border-slate-400 hover:cursor-pointer`}
+            className={`${isAvailable ? "text-black" : "text-red-600"} rounded-lg p-2 text-xs sm:text-sm uppercase font-bold w-full border border-slate-400 hover:cursor-pointer`}
           >
             {isAvailable ? "Disponible" : "No Disponible"}
           </button>
         </fetcher.Form>
       </td>
-      <td className="p-3 text-lg text-gray-800 ">
-        <div className="flex gap-2 items-center">
+      <td className="pb-3 pt-0 sm:p-3  text-gray-800 col-span-3 sm:col-span-1">
+        <div className="flex gap-2 items-center justify-between">
           {/* se puede hacer la navegación hacia el formulario de edición a través de Link */}
           {/* <Link
             to={`productos/${product.id}/editar`}

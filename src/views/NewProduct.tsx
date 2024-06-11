@@ -33,7 +33,7 @@ export default function NewProduct() {
   return (
     <>
       <div className="flex justify-between">
-        <h2 className="text-3xl font-black text-slate-500">Registrar Producto</h2>
+        <h2 className="text-2xl sm:text-3xl font-black text-slate-500">Registrar Producto</h2>
         <Link
           to="/"
           className="rounded-md bg-indigo-600 p-3 text-sm text-center font-bold text-white shadow-sm hover:bg-indigo-500"    
