@@ -24,14 +24,14 @@ export default function ProductDetails( {product} : ProductDetailsProps) {
   const isAvailable = product.availability
 
   return (
-    <tr className=" grid grid-cols-3 sm:grid-cols-4 border-b text-sm sm:text-lg items-center">
-      <td className="p-3  text-gray-800 ">
+    <tr className="grid items-center grid-cols-3 text-sm border-b sm:grid-cols-4 sm:text-lg">
+      <td className="p-3 text-gray-800 ">
         {product.name}
       </td>
-      <td className="p-3  text-gray-800 text-center">
+      <td className="p-3 text-center text-gray-800">
         {formatCurrency(product.price)}
       </td>
-      <td className="p-3  text-gray-800 text-center">
+      <td className="p-3 text-center text-gray-800">
         <fetcher.Form method="POST">
           <button
             type="submit"
@@ -43,17 +43,17 @@ export default function ProductDetails( {product} : ProductDetailsProps) {
           </button>
         </fetcher.Form>
       </td>
-      <td className="pb-3 pt-0 sm:p-3  text-gray-800 col-span-3 sm:col-span-1">
-        <div className="flex gap-2 items-center justify-between">
+      <td className="col-span-3 pt-0 pb-3 text-gray-800 sm:p-3 sm:col-span-1">
+        <div className="flex items-center justify-between gap-2">
           {/* se puede hacer la navegación hacia el formulario de edición a través de Link */}
           {/* <Link
             to={`productos/${product.id}/editar`}
-            className="bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center"
+            className="w-full p-2 text-xs font-bold text-center text-white uppercase bg-indigo-600 rounded-lg"
           >Editar</Link> */}
           {/* también se puede hacer a través de useNavigate, tiene mas ventajas */}
           <button
             onClick={() => navigate(`productos/${product.id}/editar`)}
-            className="bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center"
+            className="w-full p-2 text-xs font-bold text-center text-white uppercase bg-indigo-600 rounded-lg"
           >Editar</button>
           <Form 
             className="w-full"
@@ -67,7 +67,7 @@ export default function ProductDetails( {product} : ProductDetailsProps) {
           >
             <input 
               type="submit"
-              className="bg-red-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center"
+              className="w-full p-2 text-xs font-bold text-center text-white uppercase bg-red-600 rounded-lg"
               value="Eliminar"
             />
           </Form> 
